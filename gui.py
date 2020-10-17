@@ -31,17 +31,17 @@ class Window(QtWidgets.QMainWindow):
 
     def extra_ingredient_checker(self, pizza: Pizza):
         if self.__win.extra_sausege.checkState():
-            pizza = ExtraIngredients(pizza, "Колбаса", 5)
+            pizza = ExtraSausage(pizza)
         if self.__win.extra_chese.checkState():
-            pizza = ExtraIngredients(pizza, "Сыр", 5)
+            pizza = ExtraCheese(pizza)
         if self.__win.extra_seafood.checkState():
-            pizza = ExtraIngredients(pizza, "Морепродукты", 5)
+            pizza = ExtraSeafood(pizza)
         if self.__win.extra_souse.checkState():
-            pizza = ExtraIngredients(pizza, "Соус", 5)
+            pizza = ExtraSouse(pizza)
         if self.__win.extra_pepper.checkState():
-            pizza = ExtraIngredients(pizza, "Перец", 5)
+            pizza = ExtraPepper(pizza)
         self.__order.append(pizza.__str__())
-        self.__price += pizza.get_price
+        self.__price += pizza.get_price()
 
     def check_ordered_pizza(self):
         QMessageBox.information(self, 'Ваш заказ:', f'{self.__order}, к оплате: {self.__price}')
