@@ -53,54 +53,59 @@ class Moms(Pizza):
 
 class ExtraCheese(Pizza):
     def __init__(self, pizza: Pizza):
-        super().__init__(pizza.get_name(), pizza.get_price() + 10)
+        super().__init__(pizza.get_name(), pizza.get_price())
+        self._pizza = pizza
 
     def get_name(self):
         return self._name
 
     def get_price(self):
-        return self._price
+        return self._pizza.get_price() + 10
 
 
 class ExtraSausage(Pizza):
     def __init__(self, pizza: Pizza):
-        super().__init__(pizza.get_name(), pizza.get_price() + 10)
+        super().__init__(pizza.get_name(), pizza.get_price())
+        self._pizza = pizza
 
     def get_name(self):
         return self._name
 
     def get_price(self):
-        return self._price
+        return self._pizza.get_price() + 10
 
 
 class ExtraSeafood(Pizza):
     def __init__(self, pizza: Pizza):
-        super().__init__(pizza.get_name(), pizza.get_price() + 15)
+        super().__init__(pizza.get_name(), pizza.get_price())
+        self._pizza = pizza
 
     def get_name(self):
         return self._name
 
     def get_price(self):
-        return self._price
+        return self._pizza.get_price() + 15
 
 
 class ExtraPepper(Pizza):
     def __init__(self, pizza: Pizza):
-        super().__init__(pizza.get_name(), pizza.get_price() + 10)
+        super().__init__(pizza.get_name(), pizza.get_price())
+        self._pizza = pizza
 
     def get_name(self):
         return self._name
 
     def get_price(self):
-        return self._price
+        return self._pizza.get_price() + 10
 
 
 class ExtraSouse(Pizza):
     def __init__(self, pizza: Pizza):
-        super().__init__(pizza.get_name(), pizza.get_price() + 5)
+        super().__init__(pizza.get_name(), pizza.get_price())
+        self._pizza = pizza
 
     def get_name(self):
         return self._name
 
     def get_price(self):
-        return self._price
+        return self._pizza.get_price() + 5
